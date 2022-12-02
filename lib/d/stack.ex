@@ -2,7 +2,7 @@ defmodule Al.D.Stack do
   def empty() do
     []
   end
-  
+
   def is_empty?(s) do
     s == []
   end

@@ -1,9 +1,8 @@
 defmodule Al.D.Que do
- 
   def empty() do
     {[], []}
   end
-  
+
   def is_empty?(q) do
     q == {[], []}
   end
