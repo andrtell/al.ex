@@ -1,5 +1,4 @@
-defmodule Al.Concrete.LeftishHeapMin do
-
+defmodule Al.Concrete.LeftishHeap do
   def empty() do
     nil
   end
@@ -24,7 +23,7 @@ defmodule Al.Concrete.LeftishHeapMin do
     raise ArgumentError, "Heap is empty"
   end
 
-  def delete_min({_, _, a , b}) do
+  def delete_min({_, _, a, b}) do
     merge(a, b)
   end
 
@@ -32,7 +31,7 @@ defmodule Al.Concrete.LeftishHeapMin do
   def merge(h, nil), do: h
 
   def merge({_, val1, a1, b1} = h1, {_, val2, a2, b2} = h2) do
-    if val1 <= val2 do
+    if val1 > val2 do
       join(val1, a1, merge(b1, h2))
     else
       join(val2, a2, merge(b2, h1))
