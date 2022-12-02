@@ -1,4 +1,4 @@
-defmodule Al.Abstract.Que do
+defmodule Al.Que do
   def empty() do
     {[], []}
   end

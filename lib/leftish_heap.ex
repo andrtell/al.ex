@@ -1,4 +1,4 @@
-defmodule Al.Concrete.LeftishHeap do
+defmodule Al.LeftishHeap do
   def empty() do
     nil
   end

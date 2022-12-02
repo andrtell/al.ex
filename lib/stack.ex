@@ -1,4 +1,4 @@
-defmodule Al.Abstract.Stack do
+defmodule Al.Stack do
   def empty() do
     []
   end

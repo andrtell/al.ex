@@ -1,4 +1,4 @@
-defmodule Al.Concrete.BinaryTree do
+defmodule Al.BinaryTree do
   def empty() do
     nil
   end
