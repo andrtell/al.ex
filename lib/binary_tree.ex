@@ -7,7 +7,7 @@ defmodule Al.BinaryTree do
     t == nil
   end
 
-  def insert(h, key, val \\ nil)
+  def insert(tree, key, val \\ nil)
 
   def insert(nil, key, val) do
     {key, val, nil, nil}
