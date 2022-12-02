@@ -7,30 +7,26 @@ defmodule Al.BinaryTree do
     t == nil
   end
 
-  def insert(t, val) do
-    case t do
-      nil ->
-        {nil, val, nil}
+  def insert(nil, k_new, v_new) do
+    {k_new, v_new, nil, nil}
+  end
 
-      {l, v, r} ->
-        case val < v do
-          true -> {insert(l, val), v, r}
-          false -> {l, v, insert(r, val)}
-        end
+  def insert({k, v, l_tree, r_tree}, k_new, v_new) do
+    case k_new < k do
+      true -> {k, v, insert(l_tree, k_new, v_new), r_tree}
+      false -> {k, v, l_tree, insert(r_tree, k_new, v_new)}
     end
   end
 
-  def member?(t, val) do
-    case t do
-      nil ->
-        false
+  def member?(nil, _) do
+    false
+  end
 
-      {l, v, r} ->
-        cond do
-          val < v -> member?(l, val)
-          val > v -> member?(r, val)
-          true -> true
-        end
+  def member?({k, _, l_tree, r_tree}, k_new) do
+    cond do
+      k_new < k -> member?(l_tree, k_new)
+      k_new > k -> member?(r_tree, k_new)
+      true -> true
     end
   end
 end
