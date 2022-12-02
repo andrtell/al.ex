@@ -1,6 +1,6 @@
 # Al
 
-**TODO: Add description**
+Collection of functional algorithms, mostly for learning.
 
 ## Installation
 
